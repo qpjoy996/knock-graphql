@@ -1,0 +1,72 @@
+.privacy{
+  color: #000000 !important;
+  font-family: $font-family-yblack;
+  text-indent: 4em;
+  padding: 0 30px;
+  h1{
+    font-size: 45px;
+    text-align: center;
+    padding: 20px 0 0;
+  }
+  h2{
+    font-size: 38px;
+  }
+  h3{
+    font-size: 35px;
+  }
+  p,li,table td{
+    font-size: 30px;
+    line-height: 1.8;
+    // word-break: break-all;
+  }
+  h1,h2,h3,.weight-bold{
+    font-weight: bold;
+  }
+  .ul-number{
+    li{
+      list-style: decimal;
+      margin-left: 86px;
+      text-indent: 6px;
+      font-weight: bold;
+    }
+  }
+  .ul-dot{
+    li{
+      list-style: inside;
+    }
+  }
+
+  // 隐私条约
+  .privacy-palicy{
+    p{
+      span{
+        background-color: yellow;
+      }
+    }
+    table{
+      margin: 0 0 40px;
+      td{
+        text-indent: 0;
+        padding: 20px;
+      }
+    }
+    ul li{
+      span{
+        font-weight: bold;
+      }
+    }
+    .section-two{
+      span.weight-bold{
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  // 用户条约
+  .terms{
+
+    
+  }
+
+}
+

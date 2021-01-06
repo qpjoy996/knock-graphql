@@ -1,0 +1,174 @@
+.title{
+  font-size: 28px;
+  color: $color-white;
+  padding: 40px 0;
+}
+
+.landing-container{
+  // 登录
+  .landing-login{
+    height: 100%;
+    >p{
+      font-size: 90px;
+      font-family: $font-family-xingyan;
+      color: $color-white;
+      font-weight: $font-weight-m;
+      text-shadow: 5px 5px 5px #353535;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 40vh;
+    }
+    &-btn{
+      position: fixed;
+      bottom: 5vh;
+      width: 100%;
+      text-align: center;
+      .ant-btn{
+        @include buttonBottom();
+        &:hover{
+          @include btnHover();
+        }
+      }
+      
+      >span{
+        font-size: $font-size-title-m;
+        color: $color-white;
+        font-family: $font-family-fblack;
+        display: inline-block;
+        animation: textHidden 1s linear infinite;
+      }
+
+    }
+
+  }
+
+// 昵称
+  .landing-nickname{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    &-edit{
+      padding-top: 24vh;
+      font-family: $font-family-fblack;
+      >p{
+        color: $color-white;
+        font-size: 70px;
+
+      }
+      >img{
+        width: 328px;
+        height: 328px;
+      }
+      &-input{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        .ant-input{
+          font-variant: contextual;
+        }
+        .edit-input{
+          font-family: $font-family-yblack;
+          width: 670px;
+          font-size: 40px;
+          border: 5px solid #dae3ef;
+          border-radius: $border-radius-size-s;
+          color: #757575;
+          padding: 50px 25px;
+          background-color: #e2ecff;
+          margin-right: 10px;
+          // opacity: 1;
+          // overflow:auto;
+        }
+        ::-webkit-input-placeholder {
+          color: #cccccc;
+        }
+        .img-middle{
+          width: 90px;
+          height: 90px;
+          cursor: pointer;
+          img{
+            width: 88px;
+            height: 88px;
+            &:hover{
+              width: 90px;
+              height: 90px;
+            }
+            &:active{
+              animation: nickNameBtn .5s linear;
+            }
+          }
+        
+        }
+      }
+     
+    }
+    &-btn{
+      position: fixed;
+      bottom: 5vh;
+      width: 100%;
+      >p{
+        font-size:$font-size-title-ss;
+        font-family: $font-family-yblack;
+        color: $color-white;
+        width: 82%;
+        margin: 30px auto;
+        line-height: 1.2;
+        span{
+          color: $color-btn-primary;
+        }
+      }
+      .ant-btn{
+        @include buttonBottom();
+        &:hover{
+          @include btnHover();
+        }
+      }
+    }
+    .bg-head-img{
+      width: 330px;
+      height: 330px;
+      @include headImage();
+      border: 8px solid #ffff;
+      margin: 0 auto;
+      background-color: rgba(63, 102, 125, 1);
+      // img{
+      //   width: 180px;
+      //   margin-top: 38px;
+      // }
+    }
+
+  }
+}
+
+.landing-nickname-drawer{
+  .ant-drawer-content-wrapper{
+      height: auto !important;
+    .ant-drawer-content{
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    .ant-drawer-body{
+      padding: 0;
+      .drawer-title{
+        text-align: center;
+        padding: 30px 0 20px;
+        border-bottom: 1px solid #ececec;
+        span{
+          font-family: $font-family-fblack;
+          font-size: $font-size-title-m;
+          color: $color-btn-primary;
+          // font-weight: bold;
+        }
+      }
+      .drawer-content{
+        height: 80vh;
+        overflow: scroll;
+      }
+    }
+  }
+}
+

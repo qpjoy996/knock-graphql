@@ -1,0 +1,146 @@
+// box-show
+@mixin boxShadowPrimary($right: 5px, $bottom: 5px, $shadow: 10px) {
+  box-shadow: $right $bottom $shadow $color-box-show-primary;
+}
+
+// 按钮
+@mixin buttonBottom($width: 75%, $backgroundColor: $color-btn-primary, $color: $color-white) {
+  font-family: $font-family-fblack;
+  width: $width;
+  color: $color;
+  font-size: $font-size-title-l;
+  border-radius: $border-radius-size-s;
+  @include boxShadowPrimary(10px, 10px, 10px);
+  background-color: $backgroundColor;
+  padding: 5px 0 115px;
+  // height: 120px;
+  border: none;
+  line-height: 135px;
+  cursor: pointer;
+}
+@mixin btnHover($color: $color-white, $hoverBg: #ff962e) {
+  color: $color;
+  background-color: $hoverBg;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin boxShadow($size: 1) {
+  @if $size == 1 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  @if $size == 2 {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  }
+  @if $size == 3 {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 6px 6px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@mixin headImage {
+  // text-align: center;
+  // background: url("../../../img/basic/Bg_head.png") no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+// 预加载图片
+@mixin imgError($backgroundSize: 50%) {
+  background-image: url("../../../img/basic/Icon_imgError.png") !important;
+  background-color: #e2e2e2;
+  background-size: $backgroundSize !important;
+  background-position: center;
+}
+
+@mixin bgImage($pos: cover) {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $pos;
+}
+
+// MEDIA QUERY MANAGER
+/*
+  xs: '480px',
+  sm: '576px',
+  md: '768px',
+  lg: '992px',
+  xl: '1200px',
+  xxl: '1600px',
+
+$breakpoint arguement choices:
+- phone、phone_lg
+- pad1k、pad1k_lg
+- desktop、desktop_lg
+- phone_pad1k 
+- pad1k_desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone_lg {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint == pad1k {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == pad1k_lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop_lg {
+    @media only screen and (max-width: 1600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone_pad1k {
+    @media only screen and (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == pad1k_desktop {
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin button {
+  outline: none;
+  font-size: 28px;
+  border-radius: 100px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffc350, #ff7600);
+  box-shadow: 0 4px 4px 1px #994f01;
+  &[disabled] {
+    background: linear-gradient(180deg, #ccc, #757575) !important;
+    cursor: default;
+    pointer-events: none;
+    box-shadow: 0 4px 4px 1px #ccc;
+  }
+}

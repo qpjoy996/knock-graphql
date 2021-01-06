@@ -1,0 +1,70 @@
+.my-game {
+  min-height: 100%;
+  background-color: $color-grey-dark-3;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    margin: $gap-s 0;
+    color: $color-white;
+    font-size: 14Px;
+    word-break: break-all;
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260PX, 1fr));
+    //grid-template-columns: repeat(auto-fit, minmax(260PX, 1fr));
+    grid-gap: $gap-s;
+    cursor: default;
+    font-size: 12Px;
+    &-item {
+      display: flex;
+      background-color: $color-grey-dark-5;
+      border-radius: $radius-s;
+      overflow: hidden;
+      //max-width: 400PX;
+    }
+
+    &-l {
+      flex-shrink: 0;
+      height: 80PX;
+      width: 80PX;
+      @include bgImage();
+    }
+
+    &-r {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: $gap-px-xs;
+
+      &-t {
+        color: $color-white;
+        max-height: 2.5em;
+        line-height: 1.3;
+        overflow: hidden;
+        font-size: 12PX;
+      }
+
+      &-b {
+        display: flex;
+        align-items: flex-end;
+        color: $color-white;
+
+        .a-btn {
+          margin-left: auto;
+          font-size: 12PX;
+          width: 80PX;
+          border-radius: $radius-s;
+          text-transform: capitalize;
+          //height: 30PX;
+        }
+      }
+    }
+  }
+}

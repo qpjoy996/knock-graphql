@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'fblack';
+    src: local('fblack'), url("../font/font_list/FangHei.ttf") format('truetype');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'yblack';
+    src: local('yblack'), url("../font/font_list/FZ.TTF") format('truetype');
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'xingyan';
+    src: local('xingyan'), url("../font/font_list/XingYan.ttf") format('truetype');
+    font-display: block;
+}

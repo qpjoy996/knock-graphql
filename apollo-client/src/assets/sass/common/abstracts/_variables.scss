@@ -1,0 +1,82 @@
+// 字体
+$font-family-fblack: fblack;
+$font-family-yblack: yblack;
+$font-family-xingyan: xingyan;
+
+//弹窗样式
+$font-size-modal:0.36rem;
+
+// color
+$color-white: #fff;
+$color-black: #000;
+$color-grey-3: #333;
+$color-grey-6: #666;
+$color-grey-9: #999;
+$color-grey-f0: #f0f0f0;
+
+// 主题色
+$color-background-primary: #556074;
+$color-btn-primary: #f8891b;
+$color-btn-light: #f0f8fb;
+$color-btn-grey-dark: $color-grey-9;
+$color-btn-grey-light: #aeaeae;
+$color-btn-top: #739eab;
+$color-primary: $color-btn-top;
+$color-card-bg: #eaf3f6;
+$color-card-online: #76d672;
+$color-btn-disabled: #a2a2a1;
+// 盒子阴影色
+$color-box-show-primary: rgba(0, 0, 0, 0.4);
+
+//间距
+$gap-px-5: 5px;
+$gap-px-10: 10px;
+$gap-px-15: 15px;
+$gap-px-20: 20px;
+$gap-px-25: 25px;
+$gap-px-30: 30px;
+$gap-px-35: 35px;
+$gap-px-40: 40px;
+
+$gap-rem-5: 0.05rem;
+$gap-rem-10: 0.1rem;
+$gap-rem-15: 0.15rem;
+$gap-rem-20: 0.2rem;
+$gap-rem-25: 0.25rem;
+$gap-rem-30: 0.3rem;
+
+
+// 标题
+$font-size-title-ss: 36px;
+$font-size-title-s: 40px;
+$font-size-title-m: 48px;
+$font-size-title-l: 56px;
+// 按钮
+$font-size-btn-s: 14px;
+$font-size-btn-m: 18px;
+$font-size-btn-l: 20px;
+// 加粗
+$font-weight-s: 400;
+$font-weight-m: 700;
+// 圆角
+$border-radius-size-s: 10px;
+$border-radius-size-m: 20px;
+
+
+// Lets paly滑动高度
+$animation-paly-show-height: 68vh;
+$animation-paly-hide-height: 7vh;
+$animation-paly-card-height: 60vh;
+
+// @media all and (min-width: 450px) and (max-width: 820PX){
+//   $animation-paly-show-height:1280px;
+//   $animation-paly-hide-height:115px;
+//   $animation-paly-card-height:1160px;
+// }
+
+
+$z-index-nav: 10000;
+$z-index-gift: 1000;
+
+
+

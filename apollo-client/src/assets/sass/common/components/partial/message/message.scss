@@ -1,0 +1,43 @@
+.msg-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  .msg-avatar {
+    height: 150px;
+    width: 150px;
+    box-sizing: border-box;
+    margin-right: 0.16rem;
+
+    img {
+      width: 100%;
+    }
+  }
+  .avatar-img {
+    background-color: white;
+    border: 6px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .msg-content {
+    flex: 1;
+    text-align: left;
+    font-family: $font-family-yblack;
+    font-size: $font-size-title-ss;
+    padding-left: 12px;
+    width: 500px;
+    :last-child {
+      word-wrap: break-word;
+    }
+    :first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .msg-close {
+    height: 40px;
+  }
+}

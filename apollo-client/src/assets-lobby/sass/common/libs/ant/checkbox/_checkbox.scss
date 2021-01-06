@@ -1,0 +1,25 @@
+.ant-checkbox-wrapper {
+  font-size: $font-size-px-s;
+  .ant-checkbox {
+    font-size: $font-size-px-s;
+    .ant-checkbox-input {
+    }
+    .ant-checkbox-inner {
+      border: 1PX solid #d9d9d9;
+      border-radius: 2PX;
+      width: $font-size-px-s;
+      height: $font-size-px-s;
+      background-color: $color-grey-dark-4;
+      &::after {
+        width: 5.714PX;
+        height: 9.143PX;
+      }
+    }
+  }
+  span {
+    color: $color-white;
+  }
+}
+//.ant-checkbox-checked .ant-checkbox-inner::after {
+//  border: 2PX solid $color-white;
+//}

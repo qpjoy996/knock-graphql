@@ -1,0 +1,25 @@
+// body{
+//     background-color: #434343 !important;
+// }
+.log-body_container{
+    .log-body_container--form{
+        margin-top: 200px;
+    }
+    .form_btn{
+        margin-top: 50Px;
+    }
+    .form-input.form-input_invalid {
+        position: relative;
+    }
+    .form-input.form-input_invalid ~ label{
+        position: absolute;
+        top: -100%;
+        right: 0;
+        &.set-passwordA{
+            position: absolute;
+            top: 100%;
+            right: 0; 
+        }
+    }
+    
+}

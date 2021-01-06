@@ -1,0 +1,496 @@
+.game-manage {
+  height: 100vh;
+  overflow: scroll;
+  background-color: rgb(72, 81, 98);
+  .content-center {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  .checkbox-group {
+    .ant-col {
+      margin-right: 10px;
+    }
+    .ant-checkbox-wrapper {
+      font-size: 30px;
+      margin-right: 12px;
+      .ant-checkbox .ant-checkbox-inner {
+        background-color: transparent;
+        border-color: $color-orangle-1;
+      }
+    }
+    .ant-checkbox-checked {
+      &:after {
+        border-color: $color-orangle-1;
+      }
+      .ant-checkbox-inner::after {
+        border-color: $color-orangle-1;
+        border-width: 5px;
+      }
+    }
+    .ant-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .ant-checkbox-wrapper .ant-checkbox .ant-checkbox-inner,
+  .ant-radio-wrapper .ant-radio .ant-radio-inner {
+    width: 30px;
+    height: 30px;
+  }
+  .ant-radio-wrapper {
+    color: $color-white;
+    margin-right: 16px;
+  }
+  .ant-radio-inner {
+    background-color: transparent;
+    border-width: 2px;
+  }
+  .ant-radio:hover .ant-radio-inner,
+  .ant-radio-checked .ant-radio-inner {
+    border-color: $color-orangle-1;
+    border-width: 2px;
+    background-color: transparent;
+  }
+  .ant-radio-checked .ant-radio-inner {
+    &::after {
+      background-color: $color-orangle-1;
+    }
+  }
+  .ant-radio-inner::after {
+    width: 16px;
+    height: 16px;
+    top: 6px;
+    left: 6px;
+  }
+  .ant-radio + span {
+    vertical-align: middle;
+    font-size: 30px;
+  }
+  .checkbox-group-version {
+    width: 100%;
+    height: 220px;
+    overflow-y: scroll;
+    // border: 1px solid #ccc;
+    // border-radius: 10px;
+    margin-bottom: 20px;
+    .ant-radio-wrapper {
+      width: 100%;
+      > span:nth-child(2) {
+        display: block;
+        padding: 10px;
+        > div {
+          padding: 5px;
+          display: flex;
+          justify-content: space-between;
+        }
+        &:hover {
+          background-color: #4c4c4c;
+        }
+        span {
+          color: #fff;
+        }
+      }
+    }
+    .ant-radio-wrapper-checked {
+      > span:nth-child(2) {
+        background-color: #4c4c4c;
+      }
+    }
+    .ant-radio {
+      display: none;
+    }
+    .nopublish-Reason {
+      font-size: 30px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: #adadad;
+      }
+    }
+  }
+}
+.letsplay-game {
+  padding: 25px 20px;
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    .checkbox-group {
+      width: 70%;
+    }
+    .update-time {
+      font-size: 22px;
+      display: flex;
+      span {
+        font-size: 32px;
+        color: $color-white;
+        display: inline-block;
+        margin-right: 20px;
+      }
+      &-select {
+        position: relative;
+        &:hover > div {
+          background-color: #555f71;
+        }
+        &-icon {
+          // width: 60px;
+          // height: 60px;
+          padding: 6px;
+          text-align: center;
+          margin-top: -10px;
+          &:hover + ul {
+            display: block;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+  }
+
+  &-list {
+    &-details {
+      // background-color: rgb(59, 66, 79);
+      display: flex;
+      color: $color-white;
+      position: relative;
+      margin: 30px 0 0;
+      > img {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        margin-right: 15px;
+      }
+      .game-title-version {
+        font-size: 32px;
+        margin: 15px 0;
+      }
+    }
+  }
+  .game-title {
+    font-size: 35px;
+  }
+  .game-title-version {
+    color: rgb(140, 142, 146);
+  }
+  .game-time {
+    font-size: 30px;
+  }
+  .game-state {
+    font-size: 28px;
+    background-color: rgb(96, 142, 210);
+    padding: 10px 16px;
+    border-radius: 10px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    + img {
+      width: 45px;
+      margin-left: 10px;
+    }
+  }
+  .game-details {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    // right: 10px;
+    bottom: -10px;
+    .details-btn + ul {
+      top: 70px;
+    }
+    .details-btn {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      + ul {
+        border-top-right-radius: 0;
+        padding: 4px 0;
+      }
+    }
+  }
+
+  .dropDown-game,
+  .dropDown-game-fill {
+    ul {
+      width: max-content;
+      position: absolute;
+      right: 0;
+      display: none;
+      z-index: 99;
+      &:hover {
+        display: block;
+      }
+      li {
+        font-size: 26px;
+        color: $color-white;
+        list-style: none;
+      }
+    }
+  }
+  .dropDown-game {
+    > button,
+    > div {
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      &:hover + ul {
+        display: block;
+      }
+    }
+    ul {
+      background-color: rgb(85, 95, 113);
+      border-radius: 10px;
+      border-top-right-radius: 0;
+      overflow: hidden;
+      li {
+        padding: 16px 20px;
+      }
+      .active {
+        background-color: $color-orangle-1;
+      }
+      .arrowUp {
+        background-color: transparent;
+      }
+    }
+  }
+  .dropDown-game-fill {
+    > button,
+    > div {
+      height: 66px;
+      background-color: transparent;
+      border: 2px solid rgb(174, 194, 229);
+      border-radius: 8px;
+      padding: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+    ul {
+      background-color: rgb(85, 95, 113);
+      border: 2px solid rgb(174, 194, 229);
+      border-radius: 10px;
+      li {
+        padding: 10px 50px 10px 20px;
+        &:hover {
+          background-color: #68707d;
+        }
+      }
+    }
+  }
+  .game-details {
+    .dropDown-click-version,
+    .dropDown-click-details {
+      height: 74px;
+      border-bottom-width: 0;
+      background-color: rgb(85, 95, 113);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      position: relative;
+      z-index: 100;
+      + ul {
+        display: block;
+        // transition: dropDown 20s;
+      }
+    }
+    .dropDown-click-details {
+      margin-bottom: -8px;
+    }
+
+    .dropUp-click-version,
+    .dropUp-click-details {
+    }
+  }
+  .game-version-btn {
+    position: relative;
+    > .dropDown-game-fill {
+      position: relative;
+      width: 100%;
+      ul {
+        width: 100%;
+        padding: 15px;
+        position: relative;
+        margin-top: 4px;
+        > li {
+          display: flex;
+          justify-content: space-between;
+          padding: 6px 0;
+          &:hover {
+            background-color: transparent;
+          }
+          > div {
+            display: flex;
+            align-items: center;
+            position: relative;
+            .details-btn {
+              height: 60px !important;
+            }
+            p {
+              margin-right: 20px;
+              margin-bottom: 0;
+            }
+            .fill-versopm-details {
+              &:hover > ul {
+                display: block;
+                position: absolute;
+                top: 58px;
+              }
+              &:hover > .details-btn {
+                border-bottom-width: 0;
+                background-color: #555f71;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                position: relative;
+                z-index: 100;
+              }
+              > ul {
+                width: 80%;
+                padding: 10px 0;
+                &:hover {
+                  display: block;
+                  position: absolute;
+                  top: 58px;
+                }
+                li {
+                  padding: 10px 50px 10px 20px;
+                  &:hover {
+                    background-color: #68707d;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .version-btn {
+      padding: 15px;
+      margin-right: 10px;
+      position: absolute;
+      right: 66px;
+      top: -66px;
+      font-size: 28px;
+      color: $color-white;
+      img {
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px !important;
+    height: 0 !important;
+  }
+}
+
+.game_bannerurl {
+  .banner_url {
+    width: 100%;
+    height: 100vh;
+  }
+  // 轮播
+  .contain {
+    width: 100%;
+    height: auto;
+    transition: all 0.8s;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+  }
+  ul {
+    margin-bottom: 0;
+  }
+  .contain .ul {
+    list-style: none;
+    overflow: hidden;
+  }
+  .contain .ul .items {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  .ul li.show {
+    display: block;
+  }
+  .ul li {
+    display: none;
+  }
+  .ul li img {
+    width: 100%;
+    height: 100vh;
+  }
+  .contain .dots {
+    position: absolute;
+    left: 50%;
+    bottom: 8vh;
+    // height: 10px;
+    transform: translateX(-50%);
+  }
+  .dots li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 0px 18px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: #ccc;
+    list-style: none;
+  }
+  .dots li.active {
+    background-color: #ccc;
+    box-shadow: 0 0 0 15px #f8891b;
+  }
+  .control .left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .control .left:hover {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  .control .right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .control .right:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    display: none;
+    height: 0;
+  }
+  100% {
+    display: block;
+    height: auto;
+  }
+}
+@keyframes dropUp {
+  0% {
+    display: block;
+    height: auto;
+  }
+  100% {
+    display: none;
+    height: 0;
+  }
+}

@@ -1,0 +1,211 @@
+.ant-tree1.ant-tree-show-line {
+    font-size: 14PX;
+    transition: all 0.5s ease-in-out;
+    &>li:first-child {
+        padding-top: 7PX;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ant-tree-child-tree {
+        // margin-left: 24PX;
+    }
+
+    .folder {
+        // ul {
+        //     margin-left: 24PX;
+        // }
+    }
+
+    &>li {
+        &.folder {
+            ul {
+                &>li {
+                    left: 24PX;
+                }
+            }
+        }
+    }
+
+    li {
+        span.ant-tree-switcher.ant-tree-switcher-noop {
+            // background-color: yellow;
+            width: 24PX;
+            height: 24PX;
+            line-height: 24PX;
+            color: $color-white;
+            background: #333;
+            background-image: url("../../../../../img/disk/branch_t.png");
+            background-size: 24PX 24PX;
+            background-position: center;
+            i {
+                display: none;
+            }
+        }
+        &:last-child {
+            span.ant-tree-switcher.ant-tree-switcher-noop {
+                background-image: url("../../../../../img/disk/branch_l.png");
+            }
+        }
+    }
+
+    .ant-tree-title {
+        margin-left: 5PX;
+    }
+
+    li {
+        padding: 0;
+
+        &>span {
+            height: 24PX;
+            line-height: 24PX;
+            color: $color-white;
+            background-color: inherit;
+        }
+
+        .ant-tree-node-content-wrapper {
+            padding: 0;
+
+            &.ant-tree-node-content-wrapper-open {
+                .ant-tree-iconEle.ant-tree-icon__customize {
+                    height: 24PX;
+                    width: 24PX;
+                    line-height: 24PX;
+                    background-image: url("../../../../../img/disk/folder.svg");
+                    img {
+                        display: none;
+                    }
+
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+
+            &.ant-tree-node-content-wrapper-close {
+                .ant-tree-iconEle.ant-tree-icon__customize {
+                    height: 24PX;
+                    line-height: 24PX;
+                    img {
+                        display: none;
+                    }
+
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+
+            &.ant-tree-node-content-wrapper-normal {
+                .ant-tree-iconEle.ant-tree-icon__customize {
+                    height: 24PX;
+                    width: 24PX;
+                    line-height: 24PX;
+                    // background-image: url("../../../../../img/disk/file.svg");
+                    img {
+                        // transform: scale(1.3);
+                        // display: none;
+                        height: 100%;
+                    }
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+        &:not(:last-child)::before {
+            left: 11PX;
+            border: 1PX solid #686868;
+            border-image: repeating-linear-gradient( #686868) 10;
+            border: none;
+            // margin: 22PX 0;
+        }
+
+
+        &.ant-tree-treenode-switcher-open {
+            span {
+                &.ant-tree-switcher {
+                    width: 24PX;
+                    height: 24PX;
+                    line-height: 24PX;
+                    color: $color-white;
+                    background-color: #333;
+                    &.ant-tree-switcher_open {
+                        background-image: url("../../../../../img/disk/branch_o_r.png");
+                        background-size: 24PX 24PX;
+                        // background-color: inherit;
+                        background-position: center;
+                        i {
+                            display: none;
+                        }
+                    }
+                    &.ant-tree-switcher-noop {
+                        // background-color: yellow;
+                        background-image: url("../../../../../img/disk/branch_o_r.png");
+                        background-size: 24PX 24PX;
+                        background-color: inherit;
+                        background-position: center;
+                        i {
+                            display: none;
+                        }
+                    }
+
+                    &.ant-tree-node-content-wrapper-normal {
+                        .ant-tree-iconEle.ant-tree-icon__customize {
+                             background-image: url("../../../../../img/disk/branch_o_r.png");
+                        }
+                    }
+                }
+            }
+            &.ant-tree-treenode-selected {
+                &::before {
+                    // left: 10PX;
+                }
+            }
+        }
+
+        &.ant-tree-treenode-switcher-close {
+            &>span {
+                &.ant-tree-switcher {
+                    width: 24PX;
+                    height: 24PX;
+                    line-height: 24PX;
+                    color: $color-white;
+                    background-color: inherit;
+                    &.ant-tree-switcher_close {
+                        background-image: url(../../../../../img/disk/branch_c_r.png);
+                        // background-size: cover;
+                        background-size: 24PX 24PX;
+                        background-position: center;
+                        background-color: inherit;
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-close {
+                    color: $color-white;
+                    background-color: inherit;
+                    .ant-tree-iconEle.ant-tree-icon__customize {
+                        width: 24PX;
+                        height: 24PX;
+                        line-height: 24PX;
+                        background-image: url(../../../../../img/disk/folder.svg);
+                        background-size: cover;
+                        background-position: center;
+                        background-color: inherit;
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

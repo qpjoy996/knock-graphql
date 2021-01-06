@@ -1,0 +1,120 @@
+.btn-basic{
+  button{
+    font-family: $font-family-fblack;
+    color: $color-white;
+    // 默认背景色
+    background-color: $color-btn-primary;
+    border-radius: 10px;
+    outline:none;
+    img{
+      width: 58px;
+      height: 58px;
+      vertical-align: bottom;
+      margin-right: 8px;
+      animation: plusIcon 1.5s linear infinite;
+    }
+    span{
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+      pointer-events: none;
+    }
+  }
+ 
+  // 禁止点击及loading按钮
+  .btn-loading {
+    // opacity: 0.8;
+    //默认被loading的颜色
+    background-color: #f3a14f;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+ // 禁止按钮背景
+ .btn-disabled{
+  background-color: $color-btn-disabled;
+ }
+
+  // 底部按钮
+  &-bottom{
+    button{
+      @include boxShadowPrimary(10px,10px,10px);
+      width: 78vw;
+      margin: 0 11vw;
+      padding: 32px 15px 22px;
+      font-size: 40px;
+      transition: all .5s;
+      &:active{
+        width: 52vw;
+        margin: 0 25vw;
+        padding: 30px 0 20px;
+        font-size: $font-size-title-m;
+      }  
+      img{
+        vertical-align: unset;
+      }
+      span{
+        padding-bottom: 16px;
+        padding-top: 10px;
+      }
+      .btn-text{
+        // width: 13ch;
+      }
+    }
+  }
+  // 小的按钮(card)
+  &-small{
+    button{
+      width: 18vw;
+      background-color: $color-btn-top;
+      font-size: 30px;
+      border-radius: 15px;
+      padding: 20px 10px;
+      @include boxShadow();
+      border: none;
+      cursor: pointer;
+      img{ 
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+      }
+      .btn-text{ 
+        width: 4ch;
+      }
+      .display-none{
+        display: none;
+      }
+    }
+    .btn-loading {
+      // opacity: 0.8;
+      background-color: #81afbd;
+    }
+    .btn-disabled{
+      background-color: $color-btn-disabled;
+      img{
+        display: none;
+      }
+    }
+    
+  }
+  &-modal{
+    button{
+      width: 30vw;
+      border-radius: $border-radius-size-s;
+      font-size: $font-size-title-ss;
+      padding: 10px 0;
+      @include boxShadow();
+      border: none;
+      cursor: pointer;
+      img{
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  
+}
+

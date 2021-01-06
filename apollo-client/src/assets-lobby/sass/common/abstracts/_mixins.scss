@@ -1,0 +1,174 @@
+@mixin boxShadow($size: 1) {
+  @if $size == 1 {
+    box-shadow: 0 3PX 6PX rgba(0, 0, 0, 0.16), 0 3PX 6PX rgba(0, 0, 0, 0.23);
+  }
+  @if $size == 2 {
+    box-shadow: 0 10PX 20PX rgba(0, 0, 0, 0.10), 0 6PX 6PX rgba(0, 0, 0, 0.10);
+  }
+  @if $size == 3 {
+    box-shadow: 0 10PX 20PX rgba(255, 255, 255, 0.10), 0 6PX 6PX rgba(255, 255, 255, 0.10);
+  }
+}
+
+@mixin logInput($borderRadius: $radius-default, $hoverBG: inherit, $hoverBorderColor: $color-blue-2, $BG: $color-grey-dark-4) {
+  width: 100%;
+  background-color: $BG;
+  @include border($borderRadius: $borderRadius);
+  height: $input-height-px-m;
+  line-height: $input-height-px-m;
+  font-size: 16PX;
+  color: #FFFFFF;
+  text-indent: $gap-px-s;
+  //font-size: ;
+  &::placeholder {
+    color: $color-grey-dark-9;
+  }
+  &::-webkit-input-placeholder {
+    color: $color-grey-dark-9;
+  }
+  &:focus, &:hover, &:active {
+    outline: none;
+    border-radius: $borderRadius;
+    border-color: $hoverBorderColor;
+    background-color: $hoverBG;
+  }
+}
+
+@mixin border($size:$border-px-default, $color: $color-white, $borderRadius: $radius-default, $bgColorHover: inherit) {
+  border: none;
+  border: $size solid $color;
+  border-radius: $borderRadius;
+  &:hover {
+    background-color: $bgColorHover;
+  }
+}
+
+@mixin fonts($size: $font-size-default, $color: $font-color-default) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin imgWH($width: $img-size-default, $height: $img-size-default) {
+  width: $width;
+  height: $height;
+}
+
+@mixin fontBold($spacing) {
+  font-family: 'Arial Black', 'Arial Normal', 'Arial';
+  font-style: normal;
+  letter-spacing: $spacing;
+}
+
+@mixin fontsHover($size: $font-size-default, $color: $font-color-default, $hoverColor: $font-color-default) {
+  color: $color;
+  font-size: $size;
+  &:hover {
+    text-decoration: underline;
+    color: $hoverColor;
+    cursor: pointer;
+  }
+}
+
+@mixin dividing($color: $color-white, $gap: $gap-l) {
+  .dividing {
+    margin: $gap;
+    border: none;
+    border-bottom: $border-px-default solid $color;
+  }
+}
+
+@mixin bgImage($pos: cover) {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $pos;
+}
+
+@mixin wordEllipsis() {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+// TODO ROw
+@mixin rowFormat() {
+  height: 2.5em;
+  line-height: 1.3;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+@mixin scrollBar($width: $scroll-bar-size-mm) {
+  .scroll-bar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: $color-grey-dark-3;
+    //border-radius: $width;
+  }
+
+  .scroll-bar::-webkit-scrollbar {
+    width: $width;
+    height: $width;
+    background-color: $color-white;
+  }
+
+  .scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: $width;
+    background-color: $color-grey-dark-6;
+    //background-image: -webkit-linear-gradient(top,
+    //        $color-grey-dark-9 0%,
+    //        $color-grey-dark-6 50%,
+    //        $color-grey-dark-4 100% //#e4f5fc 0%,
+    //  //#bfe8f9 50%,
+    //  //#9fd8ef 51%,
+    //  //#2ab0ed 100%
+    //);
+  }
+}
+
+@mixin respond($breakpoint) {
+  
+  @if $breakpoint == _phone {
+    @media only screen and (max-width: 350PX) {
+      @content
+    };
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 480PX) {
+      @content
+    };
+  }
+  @if $breakpoint == phone_lg {
+    @media only screen and (min-width: 576PX) {
+      @content
+    };
+  }
+  @if $breakpoint == pad1k {
+    @media only screen and (min-width: 768PX) {
+      @content
+    }; 
+  }
+  @if $breakpoint == pad1k_lg {
+    @media only screen and (min-width: 992PX) {
+      @content
+    }; 
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1200PX) {
+      @content
+    };
+  }
+  @if $breakpoint == desktop_lg {
+    @media only screen and (max-width: 1600PX) {
+      @content
+    };
+  }
+  @if $breakpoint == phone_pad1k {
+    @media only screen and (min-width: 576PX) and (max-width: 768PX) {
+      @content
+    };
+  }
+  @if $breakpoint == pad1k_desktop {
+    @media only screen and (min-width: 992PX) and (max-width: 1200PX) {
+      @content
+    };
+  }
+}

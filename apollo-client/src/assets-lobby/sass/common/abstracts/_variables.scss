@@ -1,0 +1,197 @@
+// color
+
+$color-body-bg-1: #141F30;
+
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-brown-1: #556074;
+$color-brown-2: #739DA9;
+
+$color-red-1: #FD2954;
+$color-red-2: rgba(255, 51, 0, 1);
+
+
+$color-orangle-1: #FF8C21;
+
+$color-black: #000;
+$color-grey-dark-28: #282828;
+$color-grey-dark-3: #333;
+$color-grey-dark-32: #323232;
+$color-grey-dark-36: #363636;
+$color-grey-dark-4: #434343;
+$color-grey-dark-5: #555;
+$color-grey-dark-6: #666;
+$color-grey-dark-79: #797979;
+$color-grey-dark-84: #848484;
+$color-grey-dark-9: #999;
+$color-grey-dark: $color-grey-dark-9;
+
+$color-white: #fff;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #ddd;
+$color-grey-light-8: #e8e8e8;
+
+
+$color-a: #aaa;
+
+$color-blue-1: #00CCFF;
+$color-blue-9: #0099FF;
+$color-blue-2: #0066FF;
+$color-blue-3: #0052CC;
+$color-blue-3a: #3a5896;
+
+$color-purple-5: #53669D;
+
+// navbar
+$nav-bar-m: 50px;
+
+// gap
+$gap-xxxs: 0.02rem;
+$gap-xxs: 0.04rem;
+$gap-xs: 0.05rem;
+$gap-sx: 0.08rem;
+$gap-s: 0.1rem;
+$gap-sm: 0.15rem;
+$gap-m: 0.2rem;
+$gap-mm: 0.3rem;
+$gap-bb: 0.4rem;
+$gap-b: 0.5rem;
+$gap-l: 1rem;
+$gap-xl: 2rem;
+
+$gap-px-xxxs: 2PX;
+$gap-px-xxs: 4PX;
+$gap-px-xs: 5PX;
+$gap-px-sx: 8PX;
+$gap-px-s: 10PX;
+$gap-px-sm: 15PX;
+$gap-px-m: 20PX;
+$gap-px-mm: 30PX;
+$gap-px-bb: 40PX;
+$gap-px-b: 50PX;
+$gap-px-l: 100PX;
+$gap-px-xl: 200PX;
+
+// border
+$border-px-s: 1PX;
+$border-px-default: $border-px-s;
+
+
+// radius
+$radius-0: 0PX;
+$radius-xxs: 1PX;
+$radius-xs: 3PX;
+$radius-s: 5PX;
+$radius-m: 10PX;
+$radius-mb: 20PX;
+$radius-b: 25PX;
+$radius-l: 50PX;
+$radius-xll: 100PX;
+$radius-xl: 200PX;
+$radius-default: $radius-m;
+
+// font
+$font-weight-xs: 300;
+$font-weight-s: 400;
+$font-weight-m: 500;
+$font-weight-l: 600;
+$font-weight-xl: 700;
+
+$font-size-xxxs: 0.1rem;
+$font-size-xxs: 0.12rem;
+$font-size-xs: 0.14rem;
+$font-size-s: 0.16rem;
+$font-size-ss: 0.18rem;
+$font-size-sm: 0.2rem;
+$font-size-m: 0.24rem;
+$font-size-mm: 0.28rem;
+$font-size-b: 0.32rem;
+$font-size-l: 0.36rem;
+$font-size-px-xxxs: 10PX;
+$font-size-px-xxs: 12PX;
+$font-size-px-xs: 14PX;
+$font-size-px-s: 16PX;
+$font-size-px-ss: 18PX;
+$font-size-px-sm: 20PX;
+$font-size-px-m: 24PX;
+$font-size-px-mm: 28PX;
+$font-size-px-b: 32PX;
+$font-size-px-l: 36PX;
+
+
+// input
+$input-height-px-s: 26PX;
+$input-height-px-m: 50PX;
+$input-height-px-l: 80PX;
+
+
+// button
+$btn-height-px-s: 20PX;
+$btn-height-px-m: 30PX;
+$btn-height-px-mm: 36PX;
+$btn-height-s: 0.2rem;
+$btn-height-m: 0.3rem;
+$btn-height-mm: 0.36rem;
+
+$btn-width-px-m: 100PX;
+$btn-width-m: 1rem;
+
+
+// letter
+$letter-spacing-xs: 1PX;
+$letter-spacing-m: 2PX;
+
+// img
+$img-size-default: 0.6rem;
+$img-size-xxs: 0.14rem;
+$img-size-xs: 0.20rem;
+$img-size-s: 0.24rem;
+$img-size-b: 0.8rem;
+$img-size-bb: 0.9rem;
+$img-size-px-default: 60PX;
+
+
+
+$img-size-px-xxs: 14PX;
+$img-size-px-xs: 20PX;
+$img-size-px-xss: 22PX;
+$img-size-px-s: 24PX;
+$img-size-px-sm: 32PX;
+$img-size-px-mm: 50PX;
+$img-size-px-m: 60PX;
+$img-size-px-b: 80PX;
+$img-size-px-bb: 90PX;
+
+//scrollbar
+$scroll-bar-size-s: 3PX;
+$scroll-bar-size-m: 5PX;
+$scroll-bar-size-mm: 8PX;
+$scroll-bar-size-b: 10PX;
+
+// theme
+$font-color-default: $color-blue-1;
+
+$font-size-default: $font-size-s;
+$font-size-px-default: $font-size-px-s;
+
+
+$break-point-sss: 280PX;
+$break-point-ss: 480PX;
+$break-point-s: 600PX;
+$break-point-m: 900PX;
+$break-point-b: 1000PX;
+$break-point-l: 1200PX;
+
+$break-point-phone: 600px;
+
+$z-index-nav: 10000;
+$z-index-gift: 1000;

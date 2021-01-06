@@ -1,0 +1,16 @@
+.basic-modal {
+  font-size: $font-size-modal;
+  &-content {
+    display:flex;
+    align-items: flex-start;
+    .avatar {
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin-right:0.2rem;
+      img{
+        width:100%;
+      }
+    }
+  }
+}

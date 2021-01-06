@@ -1,0 +1,132 @@
+.audit-submit{
+  $imgSize: 100px;
+  .audit-title{
+    height: 8vh;
+    background-color: #000;
+    color: $color-white;
+    padding: 10px;
+    line-height: 7vh;
+    >span{
+      color: $color-white;
+      position: absolute;
+      right: 30px;
+      cursor: pointer;
+    }
+  }
+  .audit-content-all{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: $color-white;
+  }
+  .audit-content{
+    >div{
+      margin-bottom: 35px;
+      >p{
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+    }
+    &-issue{
+      p{
+        margin-bottom: 0 !important;
+      }
+    }
+    &-troops{
+    
+      .troops-list{
+        img{
+          width: $imgSize;
+          height: $imgSize;
+          border-radius: 50%;
+          margin-right: 15px;
+          vertical-align: bottom;
+        }
+        .img-more{
+          width: $imgSize;
+          height: $imgSize;
+          background-color: rgb(177, 197, 234);
+          border-radius: 50%;
+          display: inline-block;
+          text-align: center;
+          span{
+            line-height: $imgSize;
+            font-size: 50px;
+          }
+        }
+        >div{
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: start;
+          flex-wrap: wrap;
+          p{
+            font-size: 30px;
+          }
+          label{
+            width: 45%;
+            padding: 20px;
+            border: 2px solid #737373;
+            border-radius: 10px;
+          }
+          label.ant-radio-wrapper-checked{
+            border: 2px solid $color-orangle-1;
+            border-radius: 10px;
+            white-space: normal;
+          }
+          label{
+            span.ant-radio{
+              display: none;
+            }
+            span.ant-radio + *{
+              padding: 0;
+            }
+          }
+          label:nth-child(2){
+            margin-left: 50px;
+          }
+        }
+       
+        .group-disChoose{
+          width: 100%;
+          height: 100%;
+          color: $color-white;
+          border-radius: 10px;
+          background-color: rgba(2, 2, 2, 0.6);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          span{
+            display: inline-block;
+          }
+        }
+      }
+    } 
+  }
+  .audit-content-btn{
+    display: flex;
+    justify-content: flex-end;
+    button{
+      width: 300px;
+      height: 80px;
+      font-size: 40px;
+      padding: 15px;
+      margin-right: 10px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    .btn-ok{
+      background-color: $color-orangle-1;
+    }
+    .btn-close{
+      background-color: transparent;
+      border: 2px solid $color-white;
+    }
+  }
+}

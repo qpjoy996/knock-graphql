@@ -1,0 +1,144 @@
+.disk-tree.ant-tree.ant-tree-show-line{
+    font-size: 14PX;
+    transition: all 0.5s ease-in-out;
+    color: rgba(0, 0, 0, 0.65);
+
+    &>li:first-child {
+        padding-top: 0PX;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        ul {
+            margin: 0;
+            padding: 0 0 0 18PX;
+        }
+        
+        // span {
+        //     &.ant-tree-switcher {
+
+        //     }
+        // }
+        &>span {
+            height: 24PX;
+            width: 24PX;
+            color: #d5d5d5;
+            line-height: 24PX;
+        }
+
+        
+
+        span.ant-tree-switcher {
+            background: #333;
+            &.ant-tree-switcher-noop {
+                .ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-normal {
+                    span.ant-tree-iconEle.ant-tree-icon__customize {
+                        img {
+                            height: 24PX;
+                            width: 24PX;
+                        }
+                    }
+                }
+                &+span.ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-normal {
+                    span.ant-tree-iconEle.ant-tree-icon__customize {
+                        img {
+                            height: 24PX;
+                            width: 24PX;
+                            line-height: 24PX;
+                            background-color: #333;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.ant-tree-treenode-switcher-close {
+            span.ant-tree-switcher {
+                // background: #333;
+                &.ant-tree-switcher_close {
+
+                }
+            }
+        }
+
+        &.ant-tree-treenode-switcher-open {
+            span.ant-tree-switcher {
+                &.ant-tree-switcher-noop {
+                    i {
+                        height: 24PX;
+                        width: 24PX;
+                        line-height: 24PX;
+                        background-image: url("../../../../../img/disk/branch_o_r.png");
+                        svg {
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.ant-tree-treenode-switcher-close {
+            span.ant-tree-switcher {
+                &.ant-tree-switcher_close {
+                    i {
+                        height: 24PX;
+                        width: 24PX;
+                        line-height: 24PX;
+                        background-image: url("../../../../../img/disk/branch_c_r.png");
+                        svg {
+                            visibility: hidden;
+                        }
+                    }
+                }
+
+                &.ant-tree-switcher-noop {
+                    i {
+                        height: 24PX;
+                        width: 24PX;
+                        line-height: 24PX;
+                        background-image: url("../../../../../img/disk/branch_c_r.png");
+                        svg {
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-tree-switcher-noop > i {
+            // visibility: hidden;
+        }
+
+        &.file {
+            span.ant-tree-switcher {
+                &.ant-tree-switcher-noop {
+                    i {
+                        height: 24PX;
+                        width: 24PX;
+                        line-height: 24PX;
+                        margin-left: 5PX;
+                        background-image: url("../../../../../img/disk/branch_item.png");
+                        svg {
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &>li, .ant-tree-child-tree>li {
+        span.ant-tree-node-content-wrapper {
+            .ant-tree-iconEle.ant-tree-icon__customize {
+                height: 24PX;
+                line-height: 24PX;
+                width: 24PX;
+            }
+            &::before {
+                height: 24PX;
+                line-height: 24PX;
+            }
+        }   
+    }
+}

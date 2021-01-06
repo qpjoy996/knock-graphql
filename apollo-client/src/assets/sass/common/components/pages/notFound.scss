@@ -1,0 +1,32 @@
+.not-found{
+  height: 100%;
+  background-color: $color-white;
+  >div{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    .img{
+      width: 60vw;
+      height: 350px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    p{
+      font-family: $font-family-fblack;
+      color: #40547e;
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+    span{
+      font-family: $font-family-xingyan;
+      font-size: 160px;
+      color: #ffbb00;
+      position: absolute;
+      top: -30px;
+      left: 0px;
+    }
+  }
+  
+}

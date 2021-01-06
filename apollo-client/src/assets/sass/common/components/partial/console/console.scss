@@ -1,0 +1,44 @@
+
+.console-wrapper {
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 24px;
+  color:#000;
+  ::-webkit-scrollbar {
+    background-color: #fff !important;
+    width: 20px !important;
+    background-clip: padding-box;
+    border-radius:20px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
+  ::-webkit-scrollbar-track {
+    margin:-24px 0;
+  }
+  .search-bar{
+    margin:20px 0;
+    padding:10px;
+  }
+  .console-list {
+    max-height: 800px;
+    overflow-y: scroll;
+    .console-row {
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      .name {
+        width: 80%;
+        word-wrap: break-word;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

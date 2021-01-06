@@ -1,0 +1,10 @@
+#root {
+  .ant-message {
+    i[aria-label^=icon] {
+      display: inline-block;
+      font-size: 32px;
+      margin-right: 16px;
+      top: 1px;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.ant-modal-wrap {
+  .ant-modal.login-mask {
+    max-width: 400PX !important;
+
+    .ant-modal-content {
+
+      .ant-modal-close {
+        height: 10PX;
+
+        .ant-modal-close-x {
+          height: auto;
+          width: auto;
+          font-size: $font-size-px-s;
+          line-height: 1;
+          margin: $gap-px-s $gap-px-s;
+
+          svg {
+            fill: $color-white;
+          }
+        }
+      }
+
+      .ant-modal-header {
+        background-color: $color-grey-dark-3;
+        border-bottom: none;
+        padding: 0;
+        padding: $gap-px-xs 0;
+        height: 30PX;
+
+        .ant-modal-title {
+          font-size: $font-size-px-xs;
+          color: $color-white;
+          text-indent: $gap-px-s;
+        }
+      }
+
+      .ant-modal-body {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding: 20PX 10PX;
+        font-size: $font-size-px-xs;
+        color: $color-white;
+        background-color: $color-grey-dark-4;
+
+        .sk-fading-circle {
+          height: 20px;
+          width: 20px;
+          margin: 0 $gap-s 0 0;
+
+          .sk-circle {
+            &:before {
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+
+      .ant-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        padding: $gap-px-s;
+        border-top: none;
+        background-color: $color-grey-dark-4;
+
+
+        .modal-footer {
+          margin-left: $gap-px-s;
+
+          .a-btn {
+            font-size: $font-size-px-ss;
+            padding: $gap-px-xxs $gap-px-mm;
+            border-radius: $radius-mb;
+          }
+
+          &:first-child {
+            .a-btn {
+              background-color: $color-grey-dark-4;
+              border: $border-px-default solid $color-white;
+              color: $color-white;
+
+              &:hover, &:active {
+                background-color: $color-blue-2;
+              }
+            }
+          }
+
+          &:nth-of-type(2) {
+            .a-btn {
+              background-color: $color-blue-2;
+              color: $color-white;
+
+              &:hover, &:active {
+                background-color: $color-blue-3;
+              }
+            }
+          }
+        }
+      }
+
+      .ant-modal-footer {
+        display: none;
+      }
+    }
+  }
+}

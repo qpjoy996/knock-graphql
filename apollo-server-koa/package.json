@@ -1,0 +1,19 @@
+{
+  "name": "apollo-server-koa",
+  "version": "1.0.0",
+  "description": "1. https://juejin.im/post/6844903921643683847",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-koa": "^2.18.1",
+    "dataloader": "^2.0.0",
+    "graphql": "^15.3.0",
+    "koa": "^2.13.0",
+    "moment": "^2.29.0"
+  }
+}

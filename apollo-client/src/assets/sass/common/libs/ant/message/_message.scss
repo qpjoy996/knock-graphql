@@ -1,0 +1,14 @@
+.ant-message {
+  top: 80px;
+
+  .ant-message-notice-content {
+    font-size: $font-size-modal;
+    width: 82%;
+    background-color: rgba(0, 0, 0, 0.36);
+    color: #fff;
+  }
+
+  i[aria-label^=icon] {
+    display: none;
+  }
+}

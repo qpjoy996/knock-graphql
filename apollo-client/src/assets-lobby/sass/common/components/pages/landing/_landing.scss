@@ -1,0 +1,702 @@
+.a-btn {
+  &,
+  &:link,
+  &:visited {
+    //display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: $gap-px-s 0;
+    height: inherit;
+    width: 100%;
+    background-color: $color-blue-2;
+    color: $color-white;
+    border-radius: $radius-m;
+    transition: all .2s;
+    position: relative;
+    font-size: $font-size-px-s;
+    text-align: center;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    color: $color-white;
+    @include boxShadow(1);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
+
+.log-body {
+  overflow: auto;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  //border-radius: $radius-s;
+  overflow: hidden;
+  height: 100%;
+
+  .tip-text {
+    @include fonts($font-size-px-m, $color-white);
+  }
+
+  &-header {
+    background-color: $color-grey-dark-4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50PX;
+
+    &__operator {
+      @include imgWH($img-size-px-s, $img-size-px-s);
+      margin-right: $gap-px-m;
+      font-size: $font-size-px-s;
+
+      &-min {
+
+      }
+
+      &-x {
+
+      }
+    }
+  }
+
+  &-body {
+    background-color: $color-grey-dark-4;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: $gap-px-b 0;
+      width: 70%;
+      max-width: $break-point-ss;
+      min-width: $break-point-sss;
+
+      &--logo {
+        display: flex;
+        justify-content: center;
+        line-height: 1;
+
+        &-img {
+          //@include svgAuto($img-size-default, 50PX);
+          height: $img-size-px-default;
+          width: $img-size-px-default;
+          max-width: 80PX;
+        }
+
+        &_word {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          color: $color-white;
+          font-size: $font-size-px-m;
+
+          &-project {
+            font-weight: normal;
+            letter-spacing: 0;
+          }
+
+          &-avatar {
+            font-weight: $font-weight-xl;
+            @include fontBold($letter-spacing-xs);
+          }
+        }
+      }
+
+      &--form {
+        margin-top: auto;
+        width: 100%;
+
+        .form_group {
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-top: $gap-px-s;
+
+          .password-eye {
+            position: absolute;
+            width: $font-size-px-m;
+            height: auto;
+            right: $gap-px-s;
+            top: 50%;
+            margin-top: -#{$font-size-px-m / 2};
+            cursor: pointer;
+          }
+        }
+
+        .form_text {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: $gap-px-s;        
+
+          a {
+            @include fontsHover($font-size-px-s, $font-color-default, $color-blue-2);
+          }
+        }
+
+        .form_btn {
+          display: flex;
+          justify-content: space-between;
+          height: $input-height-px-m;
+          margin: 0!important;
+
+          .a-btn {
+            &:last-child {
+              margin-left: $font-size-px-s;
+              background-color: $color-grey-dark-4;
+              @include border($bgColorHover: $color-blue-2);
+            }
+          }
+        }
+
+        .form_action {
+          margin: $gap-px-m 0;
+          font-size: $font-size-default;
+        }
+      }
+
+      &--footer {
+        margin-top: auto;
+        @include dividing($gap: $gap-px-mm 0);
+
+        .foot-dividing {
+          position: relative;
+
+          .foot-or {
+            position: absolute;
+            display: inline-block;
+            background-color: $color-grey-dark-4;
+            color: $color-white;
+            font-size: $font-size-px-s;
+            width: 20%;
+            left: 40%;
+            text-align: center;
+            margin-top: -10PX;
+          }
+        }
+
+        .footer-oauth {
+          display: flex;
+          justify-content: center;
+
+          .oauth-img_box {
+            height: 50PX;
+            width: 50PX;
+            border-radius: 50%;
+            display: flex;
+            flex: 0 0 1;
+            background-color: rgba(0, 216, 100, 1);
+
+            &:nth-of-type(1) {
+              margin-right: 20PX;
+              background-color: rgba(220, 68, 55, 1);
+            }
+
+            &:nth-of-type(3) {
+              margin-left: 20PX;
+              background-color: rgba(58, 88, 150, 1);
+            }
+
+            img {
+              width: 50%;
+              height: 50%;
+              margin: 25%;
+
+            }
+          }
+        }
+
+        .footer-visit {
+          display: flex;
+          justify-content: center;
+          @include fontsHover($font-size-px-s, $font-color-default, $color-blue-2);
+          margin-top: $gap-px-b;
+        }
+      }
+    }
+
+
+  }
+}
+
+.area-dropdown {
+
+  & li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: $color-grey-dark-4;
+    height: $input-height-px-m;
+    font-size: 16PX;
+    color: #FFFFFF;
+    text-indent: $gap-px-s;
+
+    &::placeholder {
+      color: $color-grey-dark-9;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-9;
+    }
+
+    &:focus, &:hover, &:active {
+      outline: none;
+      font-weight: bold;
+      color: $color-grey-dark-4;
+      border-color: $color-blue-2;
+    }
+  }
+}
+
+.log {
+  &-body {
+    .register-sms &_container {
+      &--logo {
+      }
+
+      &--form {
+        .choose-area {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+          @include logInput();
+
+          .more-area {
+            transform: rotate(180deg);
+            margin-right: $gap-px-s;
+          }
+
+          &:hover, &:active, &:focus {
+            .more-area {
+              transform: rotate(0deg);
+            }
+          }
+        }
+
+        .form-input--s {
+          @include logInput();
+          width: 60PX;
+          flex-shrink: 0;
+          line-height: $input-height-px-m;
+        }
+
+        .form-input--m {
+          margin-left: $gap-px-s;
+          width: 100%;
+        }
+
+        .area-sms {
+          width: 50%;
+          flex-shrink: 0;
+          margin-right: $gap-px-s;
+        }
+
+        .get-area-sms {
+          width: 50%;
+          height: $input-height-px-m;
+          line-height: 2;
+          cursor: pointer;
+        }
+
+
+        .form_btn {
+          display: flex;
+          justify-content: space-between;
+
+          .a-btn {
+            &:last-child {
+              margin-left: $font-size-px-s;
+              background-color: $color-grey-dark-4;
+              @include border($bgColorHover: $color-blue-2);
+            }
+          }
+        }
+
+        .form_action {
+          margin: $gap-px-m 0;
+          font-size: $font-size-default;
+          //font-weight: bold;
+        }
+      }
+
+      &--footer {
+        //padding-top: $gap-px-xl;
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log {
+  &-body {
+    .register-email &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &--form {
+        .area-sms {
+          width: 50%;
+          flex-shrink: 0;
+          margin-right: $gap-px-s;
+        }
+
+        .get-area-sms {
+          width: 50%;
+          height: $input-height-px-m;
+          line-height: 2;
+          cursor: pointer;
+        }
+      }
+
+      &--footer {
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.log {
+  &-body {
+    .set-password &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &--footer {
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log {
+  &-body {
+    .set-birthday &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &--footer {
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            height: $input-height-px-m;
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log {
+  &-body {
+    .set-gender &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &--form {
+        display: flex;
+        flex-direction: column;
+
+        .a-btn {
+          font-size: $font-size-px-m;
+          background-color: $color-grey-dark-4;
+          border: 1PX solid $color-white;
+          border-radius: $radius-b;
+
+
+          &.active {
+            border: 1PX solid $color-blue-2;
+            border-radius: $radius-b;
+          }
+
+          //&:hover, &:link, &:active {
+          //  border: 1PX solid $color-blue-2;
+          //  border-radius: $radius-b;
+          //}
+        }
+
+        .gender-boy {
+          color: $color-blue-1;
+        }
+
+        .gender-girl {
+          color: $color-red-1;
+          margin-top: $gap-px-m;
+        }
+      }
+
+      &--footer {
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log {
+  &-body {
+    .set-nickname &_container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      &--form {
+        .input-nickname {
+          height: $input-height-px-l;
+          font-size: $font-size-px-m;
+        }
+      }
+
+
+      &--footer {
+        margin-top: auto;
+        margin-bottom: $gap-px-l;
+
+        .footer--last_next {
+          display: flex;
+          text-align: center;
+
+          .footer--last {
+            @include logInput($borderRadius: $radius-b, $hoverBG: $color-blue-2, $hoverBorderColor: $color-white);
+            border-radius: $radius-b;
+            width: 30%;
+            flex-shrink: 0;
+            margin-right: $gap-px-s;
+            cursor: pointer;
+          }
+
+          .footer--next {
+            border-radius: $radius-b;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-input {
+  width: 100%;
+  background-color: $color-grey-dark-4;
+  @include border();
+  height: $input-height-px-m;
+  font-size: $font-size-px-s;
+  color: #FFFFFF;
+  text-indent: $gap-px-s;
+  //font-size: ;
+  &::placeholder {
+    color: $color-grey-dark-9;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-grey-dark-9;
+  }
+
+  &:focus, &:hover, &:active {
+    outline: none;
+    border-radius: $radius-m;
+    border-color: $color-blue-2;
+  }
+
+  &.form-input_invalid {
+    border-color: $color-red-1;
+    color: $color-red-1;
+  }
+
+  & ~ label {
+    display: none;
+  }
+
+  &.form-input_invalid ~ label {
+    display: flex;
+    position: absolute;
+    //width: 80PX;
+    padding: $gap-px-s;
+    right: $border-px-default;
+    align-items: center;
+    //height: calc(#{$input-height-px-m} - (#{$border-px-default} * 2));
+    height: 48PX;
+    border-top-right-radius: $radius-m;
+    border-bottom-right-radius: $radius-m;
+    font-size: $font-size-px-s;
+    color: $color-red-1;
+    background-color: $color-grey-dark-4;
+    overflow: hidden;
+
+    &.brown {
+      background-color: $color-brown-1;
+      height: auto;
+      margin-right: 1PX;
+    }
+  }
+}
+
+.form_group {
+  .form-input--number {
+    //width: 100%;
+    //background-color: $color-grey-dark-4;
+    //@include border();
+    //color: #FFFFFF;
+    //text-indent: $gap-px-s;
+
+    @include logInput();
+    height: $input-height-px-l;
+    font-size: $font-size-px-b;
+    font-weight: bold;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus, &:hover, &:active {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    text-align: center;
+
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  .number--up_down {
+    display: flex;
+    width: 50PX;
+    height: $input-height-px-l;
+    margin-left: $gap-px-xxs;
+    //overflow: hidden;
+    flex-direction: column;
+
+    & > div {
+      border-radius: 0;
+    }
+
+    .number--up {
+      height: 38PX;
+      border-top-right-radius: $radius-m;
+      flex-shrink: 1;
+    }
+
+    .number--down {
+      height: 38PX;
+      flex-shrink: 1;
+      margin-top: $gap-px-xxs;
+      border-bottom-right-radius: $radius-m;
+    }
+
+  }
+}
